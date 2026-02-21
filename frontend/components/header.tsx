@@ -28,7 +28,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-foreground text-xl font-semibold">Pointer</span>
+            <span className="text-foreground text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Merchant AI</span>
           </div>
           <nav className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
@@ -44,9 +44,9 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer" className="hidden md:block">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-2 rounded-full font-medium shadow-sm">
-              Try for Free
+          <Link href="http://localhost:3001/subscription?callbackUrl=http://localhost:3002/agent" className="hidden md:block">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-full font-medium shadow-sm">
+              Subscribe Now
             </Button>
           </Link>
           <Sheet>
