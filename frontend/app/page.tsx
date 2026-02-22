@@ -11,7 +11,7 @@ function AgentChat() {
   const tokenCategoryFromUrl = searchParams.get("tokenCategory");
 
   const [tokenCategory, setTokenCategory] = useState<string | null>(null);
-  const [messages, setMessages] = useState<{ role: "user" | "agent", content: string, costSats?: number, claimTxid?: string }[]>([]);
+  const [messages, setMessages] = useState<{ role: "user" | "agent", content: string, costSats?: number }[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [balance, setBalance] = useState<string | null>(null);
@@ -58,8 +58,7 @@ function AgentChat() {
       setMessages(prev => [...prev, {
         role: "agent",
         content: botReply,
-        costSats: data.context.costSats,
-        claimTxid: data.context.claimTxid
+        costSats: data.context.costSats
       }]);
       setBalance(data.context.remainingBalance);
 
@@ -175,22 +174,9 @@ function AgentChat() {
                 <div className={`max-w-[80%] rounded-xl p-3 ${msg.role === "user" ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
                   <p className="whitespace-pre-wrap text-sm">{msg.content}</p>
                   {msg.costSats && (
-                    <div className="text-[10px] mt-2 opacity-80 border-t pt-1 border-current/20">
-                      <p>Cost: {msg.costSats} sats</p>
-                      {msg.claimTxid && (
-                        <p className="mt-1 text-green-600 dark:text-green-400 font-semibold">
-                          🎉 JIT Claim Triggered! Tx:{" "}
-                          <a
-                            href={`https://chipnet.imaginary.cash/tx/${msg.claimTxid}`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="underline hover:brightness-125"
-                          >
-                            {msg.claimTxid.substring(0, 10)}...
-                          </a>
-                        </p>
-                      )}
-                    </div>
+                    <p className="text-[10px] mt-2 opacity-70 border-t pt-1 border-current/20">
+                      Cost: {msg.costSats} sats
+                    </p>
                   )}
                 </div>
               </div>
