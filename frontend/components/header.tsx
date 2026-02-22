@@ -44,7 +44,7 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="http://localhost:3001/subscription?callbackUrl=http://localhost:3005/agent" className="hidden md:block">
+          <Link href="http://localhost:3001/subscription?callbackUrl=http://localhost:3002/agent" className="hidden md:block">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-full font-medium shadow-sm">
               Subscribe Now
             </Button>

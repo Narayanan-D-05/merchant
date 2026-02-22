@@ -54,7 +54,7 @@ export function HeroSection() {
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
-            onClick={() => window.location.href = "http://localhost:3001/subscription?callbackUrl=http://localhost:3005/agent"}
+            onClick={() => window.location.href = "http://localhost:3001/subscription?callbackUrl=http://localhost:3002/agent"}
             className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all flex items-center gap-2"
           >
             <Key className="w-4 h-4" />

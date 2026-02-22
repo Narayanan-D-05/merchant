@@ -162,7 +162,7 @@ export function PricingSection() {
                 </div>
               </div>
               <Button
-                onClick={() => window.location.href = "http://localhost:3001/subscription?callbackUrl=http://localhost:3005/agent"}
+                onClick={() => window.location.href = "http://localhost:3001/subscription?callbackUrl=http://localhost:3002/agent"}
                 className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}
               >
                 <div className="px-1.5 flex justify-center items-center gap-2">
